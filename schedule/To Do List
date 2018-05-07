@@ -1,0 +1,19 @@
+
+
+
+
+
+
+Scheduler
+- tableview with cells containing info about each alarm
+- Segue to a new window upon cell click that edits the action info
+- Add button that opens an alert that has you name an action and adds it to the tableview via tableview cell
+- Each cell contains name
+- Tableview within second view controller that shows all the actions along with modifiable time and days of the week- perhaps new view controller for the time setting to keep it nice
+- Option to delete the tableview Cells
+- One function for each action available on the action list
+- Drop down list for all available actions and can select them
+- Upon selecting an action from the dropdown list, an alert will appear with a slider for Ex. The amount of volume
+- able to save data
+- New class for actions that has each action with all the available actions and does them based on whether they are true or false
+- Enable or disable tableview cells on viewController one
