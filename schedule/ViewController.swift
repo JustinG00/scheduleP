@@ -39,8 +39,45 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.reloadData()
         
         
+        
+      
+        
+        
     }
 
+    
+    func actionInvoker(action:actionInfo){
+        
+        
+        let date = Date() // save date, so all components use the same date
+        let calendar = Calendar.current // or e.g. Calendar(identifier: .persian)
+        let hour = calendar.component(.hour, from: date)
+        let minute = calendar.component(.minute, from: date)
+        let second = calendar.component(.second, from: date)
+        let weekDay = calendar.component(.weekday, from: date)
+        
+        print(hour,minute,second)
+        
+//        if weekDay == action.daysOfWeek && hour == action.hourOfDay && minute = action.minuteOfHour{
+//
+//            print("Ok")
+//
+//
+//
+//
+//
+//
+//
+//        }
+//        
+        
+        
+        
+        
+        
+        
+        
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -78,7 +115,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         var alertAction = UIAlertAction(title: "Done", style: .cancel) { (action) in
             // Alert Action
-            self.actionSettings.append(actionInfo(mVolume: Int(), nVolume: Int(), vibrate: Bool(), name: alert.textFields![0].text!))
+            self.actionSettings.append(actionInfo(mVolume: Int(), nVolume: Int(), vibrate: Bool(), name: alert.textFields![0].text!, hourOfDay: Int(), minuteOfHour: Int(), daysOfWeek: Int()))
+            
             self.tableView.reloadData()
             
         }
