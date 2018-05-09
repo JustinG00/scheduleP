@@ -15,6 +15,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
  
     
     @IBOutlet weak var button: UIButton!
+    @IBOutlet var editButton: UIButton!
     
     var actionSettings = [actionInfo]()
     
@@ -158,6 +159,24 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         
     }
+    @IBAction func editTableView(_ sender: UIButton)
+    {
+        if tableView.isEditing == false {
+            tableView.isEditing = true
+        } else {
+            tableView.isEditing = false
+        }
+        if editButton.titleLabel?.text == "Finish Edit"
+        {
+            editButton.titleLabel?.text = "Edit"
+        }
+        if editButton.titleLabel?.text == "Edit"
+        {
+            editButton.titleLabel?.text = "Finish Edit"
+        }
+        
+    }
+    
     
     
     

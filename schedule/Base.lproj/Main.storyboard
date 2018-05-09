@@ -54,11 +54,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVW-Oh-B4d">
-                                <rect key="frame" x="0.0" y="54" width="44" height="30"/>
+                                <rect key="frame" x="0.0" y="62" width="186" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Edit">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <color key="backgroundColor" red="0.59544545412063599" green="0.9139091968536377" blue="0.054229505360126495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editTableView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bkb-hB-AGk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,6 +68,7 @@
                     </view>
                     <connections>
                         <outlet property="button" destination="0MS-Au-av1" id="vSL-8w-Se9"/>
+                        <outlet property="editButton" destination="UVW-Oh-B4d" id="CPH-yv-hWi"/>
                         <outlet property="tableView" destination="QeX-cw-9f8" id="ena-mL-44t"/>
                         <segue destination="Z9H-F0-pZK" kind="show" identifier="segueOne" id="enG-r3-QI2"/>
                     </connections>
